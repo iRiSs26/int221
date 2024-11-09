@@ -1,0 +1,780 @@
+/* custom.css
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #2d3748; /* Dark background */
+    color: white;
+    position: relative;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/* Navbar styling */
+.navbar {
+    background: linear-gradient(135deg, #3490dc, #2779bd); /* Gradient background */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Navbar container */
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar brand (logo or site name) */
+.navbar .brand {
+    font-size: 2.5rem; /* Increased size for better visibility */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navbar links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Separate transition properties */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Active link styling */
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background for active links */
+}
+
+/* Mobile navbar toggle input */
+.navbar .menu-toggle-input {
+    display: none;
+}
+
+/* Mobile navbar toggle button */
+.navbar .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navbar links container */
+.navbar .links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Mobile navbar links - Hidden by default */
+.navbar .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #57680c; /* Changed for better contrast */
+    position: absolute;
+    top: 70px; /* Adjust based on navbar height */
+    left: 0;
+    transition: max-height 0.3s ease-in-out; /* Smooth transition */
+    max-height: 0; /* Start with hidden state */
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Show links when checkbox is checked */
+.navbar .menu-toggle-input:checked + .links {
+    display: flex;
+    max-height: 300px; /* Limit max height for animation */
+}
+
+/* Navbar links on smaller screens */
+@media (max-width: 768px) {
+    .navbar .menu-toggle {
+        display: block;
+    }
+
+    /* Make links fill the screen */
+    .navbar .links a {
+        margin: 1rem 0;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem; /* Slightly larger text for readability */
+    }
+}
+
+
+
+
+
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* General container styling */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* General Styles */
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.section {
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-group label {
+    font-size: 1em;
+    color: #555;
+}
+
+.form-control {
+    padding: 0.8em;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.btn {
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.download-link {
+    /* text-decoration: none;
+    font-weight: bold;
+    
+    color: #3498db; */
+    display: inline-block;
+    padding: 10px 20px;  /* Adjust the padding to make it proportional */
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 20px;
+}
+
+.download-link:hover {
+    color: #2980b9;
+}
+
+/* Notes List */
+.notes-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.note-item {
+    padding: 1em;
+    background: #fff;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-results {
+    text-align: center;
+    color: #999;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6; /* Light gray background for entire page */
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Features Section */
+.features-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Gradient background */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.features-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1d4e89;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Cards */
+.feature-card {
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 150, 255, 0.15), transparent);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    z-index: 0;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.feature-card h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    z-index: 1;
+    position: relative;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+}
+
+/* Button Link */
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3498db; /* Blue background */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    z-index: 1;
+    position: relative;
+}
+
+.btn-link:hover {
+    background-color: #1d78b8;
+    transform: translateY(-2px);
+}
+
+/* Responsive Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Animation */
+.feature-card h3, .feature-card p, .btn-link {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.feature-card h3 {
+    animation-delay: 0.2s;
+}
+
+.feature-card p {
+    animation-delay: 0.4s;
+}
+
+.btn-link {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* for chatroom index */
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Header Styles */
+.header {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Sub-header Styles */
+.sub-header {
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Chatroom List Styles */
+.chatroom-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chatroom-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatroom-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatroom-topic {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+}
+
+.join-chatroom {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.join-chatroom:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+.create-chatroom {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.create-chatroom .form-group {
+    margin-bottom: 20px;
+}
+
+.create-chatroom label {
+    font-size: 16px;
+    color: #444;
+    display: block;
+}
+
+.create-chatroom input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+/* for showing chatroom */
+/* Messages Container */
+.messages {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.message-item {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #444;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Container Styles */
+.container1 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Container Styles */
+.container1, .container2 {
+    width: 80%; /* Adjusted width for better responsiveness */
+    margin: 0 auto;
+    padding: 40px; /* Increased padding for a more spacious layout */
+    background-color: #ffffff; /* White background for better contrast */
+    border-radius: 10px; /* Slightly larger border radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+}
+
+/* Header Styles */
+.header {
+    font-size: 2.5rem; /* Increased font size for prominence */
+    font-weight: 700; /* Bolder font weight for better visibility */
+    color: #333;
+    margin-bottom: 30px; /* More space below the header */
+    text-align: center;
+    text-transform: uppercase; /* Uppercase for a more formal look */
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 25px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+    font-size: 1rem; /* Increased font size for readability */
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px; /* More space below the label */
+}
+
+/* Input Field Styles */
+.input-field {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    font-size: 1rem; /* Larger font size for better readability */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.input-field:focus {
+    border-color: #3498db; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit Button Styles */
+.submit-btn {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 14px 24px; /* Increased padding for a button-like feel */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Slightly larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Button Styles for "Create New Study Group" */
+.create-group-btn {
+    text-align: right;
+    margin-bottom: 30px; /* More space below the button */
+}
+
+.btn {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 14px 24px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Consistent font size */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Group List Styles */
+.group-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.group-item {
+    background-color: #f9f9f9; /* Light background for items */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; /* Increased margin for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.group-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.group-details {
+    font-size: 1rem; /* Consistent font size */
+    color: #555;
+}
+
+/* Link Styles */
+.link {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker blue on hover */
+}
