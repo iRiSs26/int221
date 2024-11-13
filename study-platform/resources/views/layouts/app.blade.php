@@ -9,17 +9,20 @@
      <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
  </head>
  <body class="bg-gray-100">
- <!-- Navbar (Rectangular) -->
- <nav class="navbar">
-    <div class="container mx-auto flex justify-between items-center text-white">
-        <a href="{{ route('home') }}" class="text-2xl font-semibold">Study Platform</a>
-        <div class="flex space-x-6">
-            <a href="{{ route('notes.index') }}" class="hover:underline">Notes</a>
-            <a href="{{ url('/assignment-chatroom') }}" class="hover:underline">Chatroom</a>
-            <a href="{{ url('/group-study') }}" class="hover:underline">Group Study</a>
+
+<nav class="navbar">
+    <div class="containerf">
+        <a href="{{ route('home') }}" class="navbar-brand">Study Platform</a>
+        <div class="navbar-links">
+            <a href="{{ route('notes.index') }}" class="navbar-link">Notes</a>
+            <a href="{{ url('/assignment-chatroom') }}" class="navbar-link">Chatroom</a>
+            <a href="{{ url('/group-study') }}" class="navbar-link">Group Study</a>
         </div>
     </div>
 </nav>
+
+
+
      <!-- Header with centered content -->
      <header class="bg-cover bg-center h-screen flex flex-col justify-center items-center text-center text-white relative" style="background-image: url('{{ asset('images/book.jpg') }}');">
          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -39,10 +42,22 @@
      </main>
  
      <!-- Footer -->
-     <footer class="bg-gray-800 text-white p-4 text-center">
+     {{-- <footer class="bg-gray-800 text-white p-4 text-center">
          <p>&copy; 2024 Study Platform App</p>
-     </footer>
- 
+     </footer> --}}
+     <footer class="footer">
+        <div class="containernav">
+            <p class="footer-title">&copy; 2024 Study Platform App</p>
+            <div class="footer-links">
+                <a href="{{ route('home') }}" class="footer-link">Home</a>
+                <a href="{{ route('notes.index') }}" class="footer-link">Notes</a>
+                <a href="{{ url('/assignment-chatroom') }}" class="footer-link">Chatroom</a>
+                <a href="{{ url('/group-study') }}" class="footer-link">Group Study</a>
+            </div>
+            <p class="footer-rights">All Rights Reserved</p>
+        </div>
+    </footer>
+    
      <!-- JavaScript -->
      <script src="{{ asset('js/app.js') }}"></script>
  </body>

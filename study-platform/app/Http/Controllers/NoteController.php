@@ -35,7 +35,7 @@ class NoteController extends Controller
 
         // If topic is provided, search for notes that contain the topic in the title or description
         $notes = Note::when($topic, function ($query, $topic) {
-            return $query->where('topic', 'like', '%' . $topic . '%');
+            return $query->where('title', 'like', '%' . $topic . '%');
         })->get();
 
         // Return the results to the view
@@ -66,29 +66,19 @@ class NoteController extends Controller
 
     // Download a note
     public function download($id)
-    // {
-    //     $note = Note::findOrFail($id);
-    //     return Storage::download($note->file_path);
-    // }
+    
     {
         $note = Note::findOrFail($id);
 
-        // Assuming file is stored in 'storage/notes' directory
-        // $filePath = storage_path('app/' . $note->file_path);
-
-        // // Check if file exists and return download response
-        // if (file_exists($filePath)) {
-        //     return response()->download($filePath);
-        // }
+        
         if (Storage::disk('public')->exists($note->file_path)) {
             return Storage::disk('public')->download($note->file_path);
         }
 
         return redirect()->route('notes.index')->with('error', 'File not found.');
 
-        // return redirect()->route('notes.index')->with('error', 'File not found.');
     }
 
     
-    //
+    
 }

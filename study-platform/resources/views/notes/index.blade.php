@@ -137,16 +137,22 @@
     </div>
 
     <!-- Search Section -->
-    <div class="section search-section">
+      {{-- <div class="section search-section">
         <h2 class="section-title">Search Notes</h2>
         <form action="{{ route('notes.search') }}" method="GET" class="form">
             @csrf
             <div class="form-group">
-                <label for="query">Search:</label>
+                <label for="topic">Search:</label>
                 <input type="text" name="query" id="query" required class="form-control">
-            </div>
+            </div> 
             <button type="submit" class="btn">Search</button>
         </form>
+    </div>  --}}
+
+    <!-- Button to Redirect to Search Page -->
+    <div class="section search-section">
+        <h2 class="section-title">Search Notes</h2>
+        <a href="{{ route('notes.search') }}" class="btn">Go to Search</a> <!-- Button to navigate to the search page -->
     </div>
 
     <!-- Notes List -->

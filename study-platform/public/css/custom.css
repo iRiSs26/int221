@@ -3,7 +3,7 @@
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ad7a7a;
     color: #333;
 }
 
@@ -15,8 +15,8 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #2d3748; /* Dark background */
-    color: white;
+    background-color: #31362a; /* Dark background */
+    color: rgb(248, 244, 247);
     position: relative;
 }
 
@@ -34,115 +34,54 @@ header p {
 
 
 /* Navbar styling */
-.navbar {
-    background: linear-gradient(135deg, #3490dc, #2779bd); /* Gradient background */
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+ /* Navbar Styles */
+ .navbar {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient background */
+    padding: 20px 40px; /* Increased vertical and horizontal padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+    /* border-radius: 8px; Rounded corners */
+    min-height: 90px; /* Set a minimum height for the navbar */
 }
 
-/* Navbar container */
-.navbar .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.containerf {
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center; /* Center items vertically */
 }
 
-/* Navbar brand (logo or site name) */
-.navbar .brand {
-    font-size: 2.5rem; /* Increased size for better visibility */
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.navbar-brand {
+    color: #ecf0f1; /* Light text color for the brand */
+    font-size: 24px; /* Larger font size for the brand */
+    font-weight: bold; /* Bold brand text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for hover effect */
 }
 
-/* Navbar links */
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    margin: 0 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Separate transition properties */
+.navbar-brand:hover {
+    color: #3498db; /* Change color on hover */
 }
 
-/* Hover effect for links */
-.navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+.navbar-links {
+    display: flex; /* Flexbox for link layout */
+    gap: 20px; /* Space between links */
 }
 
-/* Active link styling */
-.navbar a.active {
-    background-color: rgba(255, 255, 255, 0.3); /* Light background for active links */
+.navbar-link {
+    color: #ecf0f1; /* Light color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size for links */
+    padding: 8px 12px; /* Padding for links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
-/* Mobile navbar toggle input */
-.navbar .menu-toggle-input {
-    display: none;
+.navbar-link:hover {
+    background-color: #3498db; /* Background color on hover */
+    color: white; /* Change text color on hover */
 }
-
-/* Mobile navbar toggle button */
-.navbar .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-/* Navbar links container */
-.navbar .links {
-    display: flex;
-    gap: 1rem;
-}
-
-/* Mobile navbar links - Hidden by default */
-.navbar .links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem 0;
-    background-color: #57680c; /* Changed for better contrast */
-    position: absolute;
-    top: 70px; /* Adjust based on navbar height */
-    left: 0;
-    transition: max-height 0.3s ease-in-out; /* Smooth transition */
-    max-height: 0; /* Start with hidden state */
-    overflow: hidden; /* Prevents overflow */
-}
-
-/* Show links when checkbox is checked */
-.navbar .menu-toggle-input:checked + .links {
-    display: flex;
-    max-height: 300px; /* Limit max height for animation */
-}
-
-/* Navbar links on smaller screens */
-@media (max-width: 768px) {
-    .navbar .menu-toggle {
-        display: block;
-    }
-
-    /* Make links fill the screen */
-    .navbar .links a {
-        margin: 1rem 0;
-        padding: 1rem;
-        text-align: center;
-        font-size: 1.2rem; /* Slightly larger text for readability */
-    }
-}
-
+ 
 
 
 
@@ -180,7 +119,7 @@ body {
 }
 
 /* General Styles */
-.title {
+/* .title {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 1em;
@@ -191,7 +130,7 @@ body {
     margin: 2em auto;
     padding: 2em;
     max-width: 600px;
-    background: #fff;
+    background: #c40a0a;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -242,12 +181,9 @@ body {
 }
 
 .download-link {
-    /* text-decoration: none;
-    font-weight: bold;
     
-    color: #3498db; */
     display: inline-block;
-    padding: 10px 20px;  /* Adjust the padding to make it proportional */
+    padding: 10px 20px;  
     font-size: 1.1rem;
     color: #fff;
     background-color: #3498db;
@@ -280,7 +216,7 @@ body {
     text-align: center;
     color: #999;
     font-size: 1.2em;
-}
+} */
 
 
 
@@ -399,8 +335,8 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 0px;
 }
 
 @media (min-width: 768px) {
@@ -777,4 +713,224 @@ input[type="text"] {
 .link:hover {
     text-decoration: underline; /* Underline on hover */
     color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+/* footer */
+.footer {
+    background-color: #2d3748; /* Dark gray */
+    color: white;
+    padding: 40px 0; /* Vertical padding */
+    text-align: center;
+}
+
+.containernav {
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.footer-title {
+    font-size: 24px; /* Title font size */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.footer-links {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the links */
+    gap: 30px; /* Space between links */
+    margin-bottom: 20px; /* Space below links */
+}
+
+.footer-link {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Link font size */
+    transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+.footer-link:hover {
+    color: #a0aec0; /* Lighter gray on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.footer-rights {
+    font-size: 14px; /* Smaller font size for rights */
+    color: #cbd5e0; /* Light gray for rights text */
+}
+
+
+
+/* image */
+/* notes page */
+/* General Page Styles */
+
+
+.title {
+    font-size: 2.5em;
+    color: #5a20aa;
+    text-align: center;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+/* Section Container Styling */
+.section {
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #5a20aa;
+    margin-bottom: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1em;
+    color: #5a20aa;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.form-control {
+    padding: 0.8em;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(90, 32, 170, 0.3);
+}
+
+/* Button Styling */
+.btn {
+    padding: 0.8em 1.5em;
+    background-color: #5a20aa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* For link-styled buttons */
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #451883;
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    background-color: #3a146d;
+}
+
+/* Notes List Styling */
+.notes-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.note-item {
+    padding: 1em;
+    background-color: #fafbfc;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.note-item:hover {
+    box-shadow: 0 4px 12px rgba(90, 32, 170, 0.2);
+}
+
+.note-item strong {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.link {
+    color: #5a20aa;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #451883;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+    .section {
+        padding: 1.5em;
+    }
+    .form-group label,
+    .section-title {
+        font-size: 1.4em;
+    }
+    .btn {
+        padding: 0.7em 1.2em;
+        font-size: 0.9em;
+    }
+    .form-control {
+        padding: 0.7em;
+        font-size: 0.9em;
+    }
+}
+
+
+/* gmeet */
+.gmeet-link-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    background-color: #4285f4; /* Google Meet blue color */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.gmeet-link-btn:hover {
+    background-color: #3367d6; /* Slightly darker blue on hover */
 }
